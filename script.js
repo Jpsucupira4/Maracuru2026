@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Envio para o WhatsApp
       const mensagemFinal = encodeURIComponent(mensagem);
-      const numeroWhats = "5585986593340";
+      const numeroWhats = "5585982376582";
       const linkZap = `https://wa.me/${numeroWhats}?text=${mensagemFinal}`;
 
       setTimeout(() => {
