@@ -1,104 +1,452 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2ª Edição Maracuru - MPE Off Road</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-    <a href="inscricao.html" class="btn-principal" style="margin-top: 20px; width: 100%; text-align: center;">FAZER INSCRIÇÃO AGORA</a>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2ª Edição Maracuru - Desafio nas Dunas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-    <header>
-        <img src="2maracuru.png" alt="Maracuru 2ª Edição" class="logo-header">
+      .btn-principal {
+        display: inline-block;
+        background-color: #28d311;
+        color: #000;
+        padding: 15px 35px;
+        border-radius: 5px;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.3s;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+      }
+      .btn-principal:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(40, 211, 17, 0.5);
+      }
+
+      /* Estilos dos Cards */
+      .grid-desafios {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+      }
+      .card-desafio {
+        background: #111;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #222;
+      }
+      .img-moldura {
+        padding: 12px 12px 0 12px;
+      }
+      .img-moldura img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px 12px 0 0;
+      }
+      .verde-light {
+        background: #28d311;
+      }
+      .laranja-hard {
+        background: #ff5722;
+      }
+      .card-conteudo {
+        padding: 30px;
+      }
+      .titulo-card-rota {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .icon-light {
+        color: #28d311;
+        font-size: 24px;
+      }
+      .icon-hard {
+        color: #ff5722;
+        font-size: 24px;
+      }
+      .desc-texto {
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+      }
+      .lista-info {
+        list-style: none;
+        padding: 0;
+        font-size: 13px;
+        border-top: 1px solid #222;
+        padding-top: 20px;
+      }
+      .lista-info li {
+        margin-bottom: 10px;
+      }
+      .lista-info strong {
+        color: #e67e22;
+      }
+
+      .lotes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+        align-items: start;
+      }
+      .card-lote-estilo-foto {
+        background: #111;
+        border: 2px solid #28d311;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        background-image:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+          url(&quot;img/layoutmaracuru.png&quot;);
+        background-size: cover;
+        background-position: center;
+        padding: 160px 20px;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <h1
+          style="
+            color: #28d311;
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1px;
+          "
+        >
+          2ª EDIÇÃO MARACURU
+        </h1>
+        <p
+          style="
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #eee;
+          "
+        >
+          O desafio nas dunas de pecém e taíba
+        </p>
+
+          <img
+            src="img/mpeoffroad.png"
+            alt="MPE Offroad"
+            style="
+              max-width: 320px;
+              width: 90%;
+              height: auto;
+              transition: 0.3s;
+              filter: drop-shadow(0 0 10px rgba(40, 211, 17, 0.4));
+            "
+            onmouseover="this.style.transform = 'scale(1.05)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          />
+        </a>
+      </div>
     </header>
 
-    <section class="hero-lp">
-        <div class="hero-overlay">
-            <h1>2ª EDIÇÃO MARACURU</h1>
-            <p>O DESAFIO NAS DUNAS DE PECÉM E TAÍBA</p>
-            <a href="inscricao.html" class="btn-principal">QUERO ME INSCREVER AGORA</a>
+    <section style="padding: 100px 0; background: #000">
+      <div class="container">
+        <h2
+          style="
+            color: #28d311;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+          "
+        >
+          Escolha seu desafio
+        </h2>
+        <div class="grid-desafios">
+          <div class="card-desafio">
+            <div class="img-moldura verde-light">
+              <img src="img/mlight.png" />
+            </div>
+            <div class="card-conteudo">
+              <div class="titulo-card-rota">
+                <span class="icon-light">🌿</span> MARACURU LIGHT
+              </div>
+              <p class="desc-texto">
+                Percurso pensado para a família com crianças, passeio noturno
+                relaxante e iniciantes.
+              </p>
+              <ul class="lista-info">
+                <li><strong>Terreno:</strong> Planícies, dunas e lama leve.</li>
+                <li><strong>Nível:</strong> Fácil / Intermediário.</li>
+                <li><strong>Apoio:</strong> Total e assistido pela organização.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-desafio">
+            <div class="img-moldura laranja-hard">
+              <img src="img/mhard.png" />
+            </div>
+            <div class="card-conteudo">
+              <div class="titulo-card-rota">
+                <span class="icon-hard">🚜</span> MARACURU HARD
+              </div>
+              <p class="desc-texto">
+                O verdadeiro desafio raiz para pilotos experientes e veículos
+                preparados.
+              </p>
+              <ul class="lista-info">
+                <li><strong>Terreno:</strong> Dunas íngremes e areia fofa.</li>
+                <li><strong>Nível:</strong> Intermediário / Avançado.</li>
+                <li><strong>Apoio:</strong> Especializado com puxadores conhecedores das dunas.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="container">
-        <h2 class="titulo-secao">ESCOLHA SEU DESAFIO</h2>
-        <div class="categorias">
-            <div class="card-categoria light">
-                <h3>🌿 MARACURU LIGHT</h3>
-                <p>Percurso pensado para a família com crianças, quem busca um passeio noturno relaxante, condutores com veículos originais, amantes da natureza e com pouca ou nenhuma experiência.</p>
-                <ul class="detalhes-rota">
-                    <li><strong>Terreno:</strong> Planícies, um pouco de lama, areia dura e dunas.</li>
-                    <li><strong>Nível:</strong> Fácil / Intermediário.</li>
-                    <li><strong>Apoio:</strong> Total e assistido pela organização.</li>
-                </ul>
+    <section style="padding: 80px 0; background: #0a0a0a">
+      <div class="container">
+        <h2
+          style="
+            color: #28d311;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+          "
+        >
+          Atrações Confirmadas
+        </h2>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+          "
+        >
+          <div
+            style="
+              background: #111;
+              width: 280px;
+              border-radius: 12px;
+              overflow: hidden;
+              text-align: center;
+              border: 1px solid #222;
+            "
+          >
+            <img
+              src="img/leidiane.png"
+              style="width: 100%; height: 350px; object-fit: cover"
+            />
+            <div style="padding: 20px">
+              <h4 style="margin: 0; font-size: 18px; font-weight: 700">
+                Leidiane Alves
+              </h4>
+              <small style="color: #28d311; text-transform: uppercase"
+                >Forró das Antigas</small
+              >
             </div>
-
-            <div class="card-categoria hard">
-                <h3>🚜 MARACURU HARD</h3>
-                <p>O verdadeiro desafio "raiz", pensado para aventureiros de longa data, pilotos experientes com areia, quem busca um passeio noturno radical e condutores com veículos preparados.</p>
-                <ul class="detalhes-rota">
-                    <li><strong>Terreno:</strong> Dunas íngremes, areia fofa e desafios técnicos.</li>
-                    <li><strong>Nível:</strong> Intermediário / Avançado.</li>
-                    <li><strong>Apoio:</strong> Especializado com puxadores conhecedores das dunas.</li>
-                </ul>
+          </div>
+          <div
+            style="
+              background: #111;
+              width: 280px;
+              border-radius: 12px;
+              overflow: hidden;
+              text-align: center;
+              border: 1px solid #222;
+            "
+          >
+            <img
+              src="img/helioaraujo.png"
+              style="width: 100%; height: 350px; object-fit: cover"
+            />
+            <div style="padding: 20px">
+              <h4 style="margin: 0; font-size: 18px; font-weight: 700">
+                Hélio Araújo
+              </h4>
+              <small style="color: #28d311; text-transform: uppercase"
+                >Forró Pé de Serra</small
+              >
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="kit-secao">
-        <div class="container">
-            <h2 class="titulo-secao">INSCRIÇÕES E LOTES</h2>
-            <div class="grid-kit">
-                <div class="kit-lista">
-                    <h3>O Kit Inclui:</h3>
-                    <ul>
-                        <li>👕 02 Blusas oficiais do evento</li>
-                        <li>🍢 01 Voucher petisco na barraca "O Evandro"</li>
-                        <li>📻 01 Cartela de bingo (Prêmio: Rádio Comunicador)</li>
-                        <li>🎁 Brindes de patrocinadores</li>
-                        <li>🚜 Adesivos para porta e vidro</li>
-                        <li>🗺️ Guia com experiência e apoio total</li>
-                    </ul>
-                </div>
-
-                <div class="preco-box">
-                    <div class="lote-atual">
-                        <span>1º LOTE (Até 30/03/2026)</span>
-                        <p class="valor">R$ 250,00</p>
-                        <p class="pagamento">À vista ou R$ 280,00 (2x sem juros)</p>
-                    </div>
-                    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #333;">
-                    <div class="proximo-lote" style="opacity: 0.6;">
-                        <span>2º LOTE (31/03 a 22/05)</span>
-                        <p style="font-size: 1.5rem; font-weight: 700;">R$ 300,00</p>
-                    </div>
-                    
-                    <a href="inscricao.html" class="btn-principal" style="margin-top: 20px; width: 100%; text-align: center;">FAZER INSCRIÇÃO AGORA</a>
-                </div>
+    <section
+      id="lotes"
+      style="padding: 100px 0; background: #000; border-top: 1px solid #111"
+    >
+      <div class="container">
+        <h2
+          style="
+            color: #28d311;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+          "
+        >
+          Inscrições e Lotes
+        </h2>
+        <div class="lotes-grid">
+          <div
+            style="
+              background: #0a0a0a;
+              padding: 40px;
+              border-radius: 15px;
+              border: 1px solid #222;
+            "
+          >
+            <h3
+              style="
+                color: #28d311;
+                margin-top: 0;
+                font-size: 22px;
+                margin-bottom: 30px;
+              "
+            >
+              O KIT INCLUI:
+            </h3>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                line-height: 2.5;
+                font-size: 16px;
+                color: #ccc;
+              "
+            >
+              <li>✅ 02 Blusas oficiais do evento</li>
+              <li>✅ 01 Voucher petisco (Barraca O Evandro)</li>
+              <li>✅ 01 Cartela de bingo (Prêmio: Rádio)</li>
+              <li>✅ Brindes e adesivos exclusivos</li>
+            </ul>
+          </div>
+          <div class="card-lote-estilo-foto">
+            <div
+              style="
+                background: #28d311;
+                color: #000;
+                padding: 12px;
+                border-radius: 8px;
+                font-weight: 800;
+                font-size: 14px;
+                margin-bottom: 40px;
+                text-transform: uppercase;
+              "
+            >
+              1º LOTE (Até 30/03/2026)
             </div>
+            <div
+              style="
+                font-size: 72px;
+                font-weight: 800;
+                color: #28d311;
+                margin-bottom: 10px;
+              "
+            >
+              R$ 250,00
+            </div>
+            <p
+              style="
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 40px;
+              "
+            >
+              À vista ou R$ 280,00 (2x sem juros)
+            </p>
+            <hr
+              style="border: 0; border-top: 1px solid #333; margin-bottom: 30px"
+            />
+            <div style="margin-bottom: 40px">
+              <p
+                style="
+                  color: #666;
+                  font-size: 14px;
+                  text-transform: uppercase;
+                  margin-bottom: 5px;
+                "
+              >
+                2º LOTE (31/03 a 22/05)
+              </p>
+              <p style="color: #888; font-size: 28px; font-weight: 700">
+                R$ 300,00
+              </p>
+            </div>
+            <a
+              href="inscricao.html"
+              class="btn-principal"
+              style="
+                width: 100%;
+                box-sizing: border-box;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 18px;
+              "
+            >
+              FAZER INSCRIÇÃO AGORA
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="container atracoes-section">
-        <h2 class="titulo-secao">Festa de Encerramento (23/05)</h2>
-        <div class="grid-atracoes">
-            <div class="card-atracao">
-                <span class="icon-music">🪗</span>
-                <h4>Leidiane Alves</h4>
-                <p>Forró das Antigas</p>
-            </div>
-            <div class="card-atracao">
-                <span class="icon-music">🪗</span>
-                <h4>Hélio Araújo</h4>
-                <p>Forró Pé de Serra</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-lp">
-        <p>© 2026 Maranguape Off Road - MPE OFFROAD</p>
+    <footer
+      style="
+        padding: 60px 20px;
+        text-align: center;
+        color: #444;
+        font-size: 12px;
+        background: #000;
+      "
+    >
+      <div class="container">
+        <p style="margin: 0">
+          &copy; 2026 Maranguape Off Road - MPE OFFROAD. Todos os direitos
+          reservados.
+        </p>
+      </div>
     </footer>
-
-</body>
+  </body>
+</html>
