@@ -1,0 +1,247 @@
+/* =========================================================
+   ARQUIVO: empresario.css (VERSÃO 2.0 - PREMIUM)
+   FUNÇÃO: Estilos exclusivos da página de Patrocinadores
+========================================================= */
+
+/* --- SEÇÃO HERO DO EMPRESÁRIO --- */
+.hero-empresario {
+  height: 70vh; /* Um pouco mais alto para dar respiro */
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), #000),
+    url("img/fundo-trilha.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 2px solid #222;
+}
+
+.hero-overlay h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff; /* Título em branco para contrastar */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitulo-hero {
+  color: var(--verde-maracuru);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.texto-hero {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* --- SEÇÃO DE PASSEIOS B2B --- */
+.secao-vitrine {
+  padding: 100px 0;
+  background: #000;
+}
+
+.subtexto-secao {
+  text-align: center;
+  color: #888;
+  margin-top: -30px;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+/* Efeito de flutuar nas vitrines */
+.secao-vitrine .card-desafio {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.secao-vitrine .card-desafio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(40, 211, 17, 0.15);
+}
+
+/* --- SEÇÃO DE PLANOS (VISUAL PREMIUM) --- */
+.secao-planos-b2b {
+  padding: 100px 0;
+  background: #050505; /* Fundo quase preto, super elegante */
+  border-top: 1px solid #151515;
+}
+
+.container-planos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/* Base para todos os cards de patrocínio */
+.card-patrocinio {
+  background: #111; /* Fundo escuro uniforme para todos */
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-patrocinio:hover {
+  transform: translateY(-10px);
+}
+
+.card-patrocinio img {
+  width: 100%;
+  border-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  opacity: 0.8; /* Deixa a imagem um pouco mais escura */
+  transition: 0.3s;
+}
+
+.card-patrocinio:hover img {
+  opacity: 1; /* Acende a imagem ao passar o mouse */
+}
+
+.titulo-plano {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subtitulo-plano {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+/* Estilos de borda e sombra para cada plano */
+.plano-parceiro {
+  border: 1px solid #222;
+  border-top: 5px solid var(--verde-maracuru);
+}
+.plano-parceiro:hover {
+  box-shadow: 0 10px 40px rgba(40, 211, 17, 0.2);
+  border-color: var(--verde-maracuru);
+}
+
+.plano-participante {
+  border: 1px solid #222;
+  border-top: 5px solid #ff5722; /* Laranja da logo */
+}
+.plano-participante:hover {
+  box-shadow: 0 10px 40px rgba(255, 87, 34, 0.2);
+  border-color: #ff5722;
+}
+
+.plano-master {
+  border: 1px solid #222;
+  border-top: 5px solid #4da6ff; /* Azul premium */
+  transform: scale(1.05); /* Destaque no meio */
+  z-index: 10;
+}
+.plano-master:hover {
+  box-shadow: 0 10px 50px rgba(77, 166, 255, 0.25);
+  border-color: #4da6ff;
+  transform: scale(1.05) translateY(-10px);
+}
+
+/* Tag exclusiva do plano Master */
+.tag-exclusividade {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4da6ff;
+  color: #000;
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(77, 166, 255, 0.4);
+}
+
+/* --- LISTA DE BENEFÍCIOS --- */
+.beneficios-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+  flex-grow: 1; /* O SEGREDO DO ALINHAMENTO */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.beneficios-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.beneficios-lista li strong {
+  color: #eee; /* Destaca a parte forte do texto */
+}
+
+/* Cores dinâmicas para os ícones e subtítulos */
+.plano-parceiro .check-icon,
+.plano-parceiro .subtitulo-plano {
+  color: var(--verde-maracuru);
+}
+.plano-participante .check-icon,
+.plano-participante .subtitulo-plano {
+  color: #ff5722;
+}
+.plano-master .check-icon,
+.plano-master .subtitulo-plano {
+  color: #4da6ff;
+}
+
+/* --- BOTÕES DO CARTÃO --- */
+.btn-plano {
+  margin-top: auto; /* O SEGREDO 2: Empurra o botão pro fundo! */
+  padding: 18px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+/* Mantém o botão principal verde pro Parceiro */
+.btn-participante {
+  background-color: #ff5722;
+  color: #fff;
+}
+.btn-participante:hover {
+  box-shadow: 0 0 25px rgba(255, 87, 34, 0.6);
+}
+
+.btn-master {
+  background-color: #4da6ff;
+  color: #000;
+}
+.btn-master:hover {
+  box-shadow: 0 0 25px rgba(77, 166, 255, 0.6);
+}

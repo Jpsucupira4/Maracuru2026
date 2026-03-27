@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficha de Patrocínio - Maracuru</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================================================
+         SISTEMA DE CORES INTELIGENTE (Controlado pelo JS)
+      ========================================================= */
+      :root {
+        --cor-tema: #28d311;
+        --cor-texto-botao: #000000;
+        --preto-profundo: #0a0a0a;
+        --cinza-card: #151515;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        background-color: var(--preto-profundo);
+        color: #f4f4f4;
+        line-height: 1.6;
+      }
+
+      /* CABEÇALHO */
+      header {
+        background: #000;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px solid var(--cor-tema);
+        transition: border-color 0.5s ease;
+      }
+      .logo-header {
+        height: 80px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      /* CONTAINER DO FORMULÁRIO */
+      .form-container {
+        background: var(--cinza-card);
+        padding: clamp(20px, 5vw, 40px);
+        border-radius: 15px;
+        max-width: 800px;
+        margin: 60px auto;
+        border: 1px solid #333;
+        border-top: 5px solid var(--cor-tema);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: border-color 0.5s ease;
+      }
+
+      .titulo-form {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .plano-destaque {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--cor-tema);
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.5s ease;
+      }
+
+      /* CAMPOS DO FORMULÁRIO */
+      fieldset {
+        border: 1px solid #333;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+      legend {
+        padding: 0 15px;
+        color: var(--cor-tema);
+        font-weight: 800;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        transition: color 0.5s ease;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+      .input-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #bbb;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        background: #0a0a0a;
+        border: 1px solid #444;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--cor-tema);
+        outline: none;
+        box-shadow: 0 0 10px var(--cor-tema);
+        opacity: 0.8;
+      }
+
+      /* BOTÃO INTELIGENTE */
+      .btn-enviar {
+        display: block;
+        width: 100%;
+        background: var(--cor-tema);
+        color: var(--cor-texto-botao);
+        padding: 20px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-top: 20px;
+        letter-spacing: 1px;
+      }
+      .btn-enviar:hover {
+        filter: brightness(1.2);
+        transform: translateY(-3px);
+      }
+
+      /* RODAPÉ */
+      footer {
+        text-align: center;
+        padding: 50px 20px;
+        background: #000;
+        color: #555;
+        font-size: 0.85rem;
+        border-top: 1px solid #222;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="img/mpeoffroad.png" class="logo-header" alt="Logo Maracuru"
+      /></a>
+    </header>
+
+    <section class="form-container">
+      <h2 class="titulo-form">Ficha de Patrocínio</h2>
+
+      <div id="texto-plano-escolhido" class="plano-destaque">CARREGANDO...</div>
+
+      <form id="formPatrocinio">
+        <fieldset>
+          <legend>1. Dados da Empresa</legend>
+          <div class="input-group">
+            <label>Nome da Empresa (Razão Social ou Fantasia):</label>
+            <input
+              type="text"
+              id="empresa"
+              required
+              placeholder="Ex: Auto Peças Silva"
+            />
+          </div>
+          <div class="input-row">
+            <div class="input-group">
+              <label>CNPJ (Opcional):</label>
+              <input type="text" id="cnpj" placeholder="00.000.000/0001-00" />
+            </div>
+            <div class="input-group">
+              <label>Ramo de Atuação:</label>
+              <input
+                type="text"
+                id="ramo"
+                required
+                placeholder="Ex: Oficina Mecânica"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Contato do Responsável</legend>
+          <div class="input-row">
+            <div class="input-group">
+              <label>Nome do Responsável:</label>
+              <input
+                type="text"
+                id="nome_responsavel"
+                required
+                placeholder="Nome completo"
+              />
+            </div>
+            <div class="input-group">
+              <label>WhatsApp para Contato:</label>
+              <input
+                type="tel"
+                id="telefone"
+                required
+                placeholder="(85) 90000-0000"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Instagram da Empresa:</label>
+            <input type="text" id="instagram" placeholder="@suaempresa" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Detalhes da Parceria</legend>
+          <div class="input-group">
+            <label>Confirme o seu Plano:</label>
+            <select id="impacto">
+              <option value="Patrocinador Parceiro - R$ 400,00">
+                Patrocinador Parceiro - R$ 400,00
+              </option>
+              <option value="Patrocinador Participante - R$ 600,00">
+                Patrocinador Participante - R$ 600,00
+              </option>
+              <option value="Patrocinador Master - R$ 1.000,00">
+                Patrocinador Master - R$ 1.000,00
+              </option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Alguma dúvida ou pedido especial?</label>
+            <textarea
+              id="obs"
+              rows="3"
+              placeholder="Escreva aqui..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="btnEnviar" class="btn-enviar">
+          Solicitar Patrocínio via WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2026 Maranguape Off Road - Área B2B. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+
+    <script src="inscricao-patrocinador.js"></script>
+  </body>
+</html>
