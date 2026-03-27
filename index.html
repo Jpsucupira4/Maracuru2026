@@ -133,7 +133,7 @@
       style="
         background-image:
           linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-          url(&quot;layoutmaracuru.png&quot;);
+          url(&quot;img/layoutmaracuru.png&quot;);
         background-size: cover;
         background-position: center;
         padding: 160px 20px;
@@ -165,11 +165,21 @@
           O desafio nas dunas de pecém e taíba
         </p>
 
-        <img
-          src="mpeoffroad.png"
-          alt="Logo Maracuru"
-          style="max-width: 400px; width: 100%; height: auto"
-        />
+        <a href="inscricao.html">
+          <img
+            src="img/mpeoffroad.png"
+            alt="MPE Offroad"
+            style="
+              max-width: 320px;
+              width: 90%;
+              height: auto;
+              transition: 0.3s;
+              filter: drop-shadow(0 0 10px rgba(40, 211, 17, 0.4));
+            "
+            onmouseover="this.style.transform = 'scale(1.05)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          />
+        </a>
       </div>
     </header>
 
@@ -190,39 +200,52 @@
         <div class="grid-desafios">
           <div class="card-desafio">
             <div class="img-moldura verde-light">
-              <img src="mlight.png" />
+              <img src="img/mlight.png" />
             </div>
             <div class="card-conteudo">
               <div class="titulo-card-rota">
                 <span class="icon-light">🌿</span> MARACURU LIGHT
               </div>
               <p class="desc-texto">
-                Percurso pensado para a família com crianças, passeio noturno
-                relaxante e iniciantes.
+                Percurso pensado para a família com crianças, quem busca um
+                passeio noturno relaxante, condutores com veículos originais e
+                iniciantes.
               </p>
               <ul class="lista-info">
-                <li><strong>Terreno:</strong> Planícies, dunas e lama leve.</li>
+                <li>
+                  <strong>Terreno:</strong> Planícies, um pouco de lama, areia
+                  dura e dunas.
+                </li>
                 <li><strong>Nível:</strong> Fácil / Intermediário.</li>
-                <li><strong>Apoio:</strong> Total e Assistido</li>
+                <li>
+                  <strong>Apoio:</strong> Total e assistido pela organização.
+                </li>
               </ul>
             </div>
           </div>
           <div class="card-desafio">
             <div class="img-moldura laranja-hard">
-              <img src="mhard.png" />
+              <img src="img/mhard.png" />
             </div>
             <div class="card-conteudo">
               <div class="titulo-card-rota">
                 <span class="icon-hard">🚜</span> MARACURU HARD
               </div>
               <p class="desc-texto">
-                O verdadeiro desafio raiz para pilotos experientes e veículos
+                O verdadeiro desafio "raiz", pensado para aventureiros de longa
+                data, pilotos experientes em areia e condutores com veículos
                 preparados.
               </p>
               <ul class="lista-info">
-                <li><strong>Terreno:</strong> Dunas íngremes e areia fofa.</li>
+                <li>
+                  <strong>Terreno:</strong> Dunas íngremes, areia fofa e
+                  desafios técnicos.
+                </li>
                 <li><strong>Nível:</strong> Intermediário / Avançado.</li>
-                <li><strong>Apoio:</strong> Total e Assistido com uma equipe especializada</li>
+                <li>
+                  <strong>Apoio:</strong> Especializado com puxadores
+                  experientes.
+                </li>
               </ul>
             </div>
           </div>
@@ -263,7 +286,7 @@
             "
           >
             <img
-              src="leidiane.png"
+              src="img/leidiane.png"
               style="width: 100%; height: 350px; object-fit: cover"
             />
             <div style="padding: 20px">
@@ -286,7 +309,7 @@
             "
           >
             <img
-              src="helioaraujo.png"
+              src="img/helioaraujo.png"
               style="width: 100%; height: 350px; object-fit: cover"
             />
             <div style="padding: 20px">
@@ -306,8 +329,8 @@
       id="patrocinadores"
       style="padding: 80px 0; background: #050505; border-top: 1px solid #111"
     >
-      <div class="container">
-        <div style="text-align: center; margin-bottom: 40px">
+      <div class="container" style="max-width: 1200px">
+        <div style="text-align: center; margin-bottom: 60px">
           <h2
             style="
               font-size: clamp(36px, 6vw, 64px);
@@ -326,20 +349,18 @@
           style="
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
-            align-items: stretch;
-            max-width: 1100px;
-            margin: 0 auto;
+            gap: 50px;
+            justify-content: space-between;
           "
         >
-          <div style="flex: 1; min-width: 320px">
+          <div style="flex: 1; min-width: 300px; max-width: 450px">
             <h3
               style="
                 color: #fff;
                 font-size: 26px;
                 font-weight: 800;
                 margin-bottom: 30px;
-                text-align: center;
+                text-align: left;
               "
             >
               As Vantagens de patrocinar o<br />nosso Evento?
@@ -398,15 +419,31 @@
                 </div>
               </li>
             </ul>
+
+            <div style="margin-top: 40px; text-align: center">
+              <a
+                href="empresario.html"
+                class="btn-principal"
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 20px;
+                  font-size: 18px;
+                  border-radius: 10px;
+                "
+              >
+                QUERO SER UM PATROCINADOR!
+              </a>
+            </div>
           </div>
 
           <div
             style="
               flex: 1.5;
+              min-width: 320px;
               display: flex;
-              gap: 20px;
-              flex-wrap: wrap;
-              justify-content: center;
+              flex-direction: column;
+              align-items: center;
             "
           >
             <h3
@@ -425,173 +462,181 @@
 
             <div
               style="
-                background: #193a1c;
-                border-radius: 15px;
-                padding: 15px;
-                width: 270px;
-                text-align: left;
                 display: flex;
-                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 20px;
               "
             >
-              <img
-                src="patreon1.png"
-                alt="Patrocinador Parceiro"
+              <div
                 style="
-                  width: 100%;
-                  border-radius: 10px;
-                  height: 180px;
-                  object-fit: cover;
-                "
-              />
-              <h4
-                style="
-                  color: #fff;
-                  text-align: center;
-                  font-size: 16px;
-                  margin: 15px 0;
-                  font-weight: 800;
-                  font-family: &quot;Times New Roman&quot;, serif;
-                  letter-spacing: 1px;
+                  background: #193a1c;
+                  border-radius: 15px;
+                  padding: 15px;
+                  width: calc(50% - 10px);
+                  text-align: left;
+                  display: flex;
+                  flex-direction: column;
+                  box-sizing: border-box;
                 "
               >
-                PATROCINADOR PARCEIRO
-              </h4>
-              <ul
+                <img
+                  src="img/patreon1.png"
+                  alt="Patrocinador Parceiro"
+                  style="
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 160px;
+                    object-fit: cover;
+                  "
+                />
+                <h4
+                  style="
+                    color: #fff;
+                    text-align: center;
+                    font-size: 15px;
+                    margin: 15px 0;
+                    font-weight: 800;
+                    font-family: &quot;Times New Roman&quot;, serif;
+                    letter-spacing: 1px;
+                  "
+                >
+                  PATROCINADOR PARCEIRO
+                </h4>
+                <ul
+                  style="
+                    color: #fff;
+                    list-style: none;
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    margin: 0;
+                  "
+                >
+                  <li style="margin-bottom: 5px">Sua logo no Carro Puxador</li>
+                  <li style="margin-bottom: 5px">Sua logo na Camisa oficial</li>
+                  <li style="margin-bottom: 5px">
+                    Logo no kit Participante (leve sua marca)
+                  </li>
+                  <li style="margin-bottom: 5px">
+                    Logo no Adesivo de porta do Evento!
+                  </li>
+                  <li style="margin-bottom: 5px">
+                    01 Camisa do Evento + Chamada das bandas
+                  </li>
+                  <li>Logo no banner do Evento</li>
+                </ul>
+              </div>
+
+              <div
                 style="
-                  color: #fff;
-                  list-style: none;
-                  padding: 0;
-                  font-size: 13px;
-                  line-height: 1.5;
-                  margin: 0;
+                  background: #4a2d13;
+                  border-radius: 15px;
+                  padding: 15px;
+                  width: calc(50% - 10px);
+                  text-align: left;
+                  display: flex;
+                  flex-direction: column;
+                  box-sizing: border-box;
                 "
               >
-                <li style="margin-bottom: 5px">Sua logo no Carro Puxador</li>
-                <li style="margin-bottom: 5px">Sua logo na Camisa oficial</li>
-                <li style="margin-bottom: 5px">
-                  Logo no kit Participante (leve sua marca)
-                </li>
-                <li style="margin-bottom: 5px">
-                  Logo no Adesivo de porta do Evento!
-                </li>
-                <li style="margin-bottom: 5px">
-                  01 Camisa do Evento + Chamada das bandas
-                </li>
-                <li>Logo no banner do Evento</li>
-              </ul>
+                <img
+                  src="img/patreon2.png"
+                  alt="Patrocinador Participante"
+                  style="
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 160px;
+                    object-fit: cover;
+                  "
+                />
+                <h4
+                  style="
+                    color: #fff;
+                    text-align: center;
+                    font-size: 15px;
+                    margin: 15px 0;
+                    font-weight: 800;
+                    font-family: &quot;Times New Roman&quot;, serif;
+                    letter-spacing: 1px;
+                  "
+                >
+                  PATROCINADOR PARTICIPANTE
+                </h4>
+                <ul
+                  style="
+                    color: #fff;
+                    list-style: none;
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    margin: 0;
+                  "
+                >
+                  <li style="margin-bottom: 5px">Sua logo no Carro Puxador</li>
+                  <li style="margin-bottom: 5px">Sua logo na Camisa oficial</li>
+                  <li style="margin-bottom: 5px">
+                    Logo no kit Participante (leve sua marca)
+                  </li>
+                  <li style="margin-bottom: 5px">
+                    Logo no Adesivo de porta do Evento!
+                  </li>
+                  <li style="margin-bottom: 5px">
+                    01 Camisa do Evento + Chamada das bandas
+                  </li>
+                  <li style="margin-bottom: 5px">
+                    01 kit Completo do trilheiro c/ inscrição inclusa
+                  </li>
+                  <li>Logo no banner do Evento</li>
+                </ul>
+              </div>
             </div>
 
             <div
               style="
-                background: #4a2d13;
-                border-radius: 15px;
-                padding: 15px;
-                width: 270px;
-                text-align: left;
-                display: flex;
-                flex-direction: column;
+                background: #0d2345;
+                border-radius: 20px;
+                padding: 25px;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
               "
             >
               <img
-                src="patreon2.png"
-                alt="Patrocinador Participante"
+                src="img/patreon3.png"
+                alt="Patrocinador Master"
                 style="
                   width: 100%;
-                  border-radius: 10px;
-                  height: 180px;
+                  border-radius: 15px;
+                  height: 200px;
                   object-fit: cover;
                 "
               />
               <h4
                 style="
                   color: #fff;
-                  text-align: center;
-                  font-size: 16px;
-                  margin: 15px 0;
+                  font-size: 20px;
                   font-weight: 800;
+                  margin: 20px 0 15px 0;
+                  letter-spacing: 2px;
                   font-family: &quot;Times New Roman&quot;, serif;
-                  letter-spacing: 1px;
                 "
               >
-                PATROCINADOR PARTICIPANTE
+                PATROCINADOR MASTER
               </h4>
-              <ul
-                style="
-                  color: #fff;
-                  list-style: none;
-                  padding: 0;
-                  font-size: 13px;
-                  line-height: 1.5;
-                  margin: 0;
-                "
-              >
-                <li style="margin-bottom: 5px">Sua logo no Carro Puxador</li>
-                <li style="margin-bottom: 5px">Sua logo na Camisa oficial</li>
-                <li style="margin-bottom: 5px">
-                  Logo no kit Participante (leve sua marca)
-                </li>
-                <li style="margin-bottom: 5px">
-                  Logo no Adesivo de porta do Evento!
-                </li>
-                <li style="margin-bottom: 5px">
-                  01 Camisa do Evento + Chamada das bandas
-                </li>
-                <li style="margin-bottom: 5px">
-                  01 kit Completo do trilheiro c/ inscrição inclusa + vídeo
-                  exclusivo da empresa em nossas redes sociais
-                </li>
-                <li>Logo no banner do Evento</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top: 40px; display: flex; justify-content: center">
-          <div
-            style="
-              background: #0d2345;
-              border-radius: 20px;
-              padding: 25px;
-              max-width: 900px;
-              width: 100%;
-              text-align: center;
-            "
-          >
-            <img
-              src="patreon3.png"
-              alt="Patrocinador Master"
-              style="
-                width: 100%;
-                border-radius: 15px;
-                max-height: 350px;
-                object-fit: cover;
-              "
-            />
-            <h4
-              style="
-                color: #fff;
-                font-size: 20px;
-                font-weight: 800;
-                margin: 25px 0 20px 0;
-                letter-spacing: 2px;
-                font-family: &quot;Times New Roman&quot;, serif;
-              "
-            >
-              PATROCINADOR MASTER
-            </h4>
-            <div style="color: #fff; font-size: 15px; line-height: 1.8">
-              Sua logo no Carro Puxador &nbsp;&nbsp;&nbsp;&nbsp; Sua logo na
-              Camisa oficial &nbsp;&nbsp;&nbsp;&nbsp; Logo no banner do
-              Evento<br />
-              Logo no kit Participante (leve sua marca) &nbsp;&nbsp;&nbsp;&nbsp;
-              Logo no Adesivo de porta do Evento!<br />
-              01 Camisa do Evento + Chamada das bandas &nbsp;&nbsp;&nbsp;&nbsp;
-              01 kit Completo do trilheiro c/ inscrição inclusa<br />
-              + vídeo exclusivo da empresa em nossas redes sociais<br />
-              Exposição Premium de Vídeos e Posts &nbsp;&nbsp;&nbsp;&nbsp;
-              Destaque Máximo na Camisa e nas Comunicações<br />
-              Apresentação Especial nos Palcos
+              <div style="color: #fff; font-size: 14px; line-height: 1.6">
+                Sua logo no Carro Puxador &nbsp;•&nbsp; Sua logo na Camisa
+                oficial &nbsp;•&nbsp; Logo no banner do Evento<br />
+                Logo no kit Participante (leve sua marca) &nbsp;•&nbsp; Logo no
+                Adesivo de porta do Evento!<br />
+                01 Camisa do Evento + Chamada das bandas &nbsp;•&nbsp; 01 kit
+                Completo do trilheiro c/ inscrição inclusa<br />
+                + vídeo exclusivo da empresa em nossas redes sociais<br />
+                Exposição Premium de Vídeos e Posts &nbsp;•&nbsp; Destaque
+                Máximo na Camisa e nas Comunicações<br />
+                Apresentação Especial nos Palcos
+              </div>
             </div>
           </div>
         </div>
